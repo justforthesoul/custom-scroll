@@ -1,0 +1,7 @@
+@function size($size-in-px) {
+  @return $size-in-px / 16px * 1rem;
+}
+
+@function size-desktop($size-in-px) {
+  @return $size-in-px / $viewport--xxl * 100vw;
+}

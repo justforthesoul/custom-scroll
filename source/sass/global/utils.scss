@@ -1,0 +1,224 @@
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+
+  clip: rect(0 0 0 0);
+}
+
+.wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  background-color: $bg-black-russian;
+
+  .header,
+  .footer {
+    flex-shrink: 0;
+  }
+
+  main {
+    flex-grow: 1;
+  }
+}
+
+.scroll-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  transform: translate3d(0, 0, 0);
+
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  @include viewport--sm {
+    position: relative;
+
+    overflow: visible;
+  }
+}
+
+.scroller {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100vh;
+
+  @include viewport--sm {
+    display: none;
+  }
+}
+
+.scroll-lock:not(.hack-selector) {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scroll-lock-ios:not(.hack-selector) {
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.block-pointer:not(.hack-selector) {
+  pointer-events: none;
+}
+
+.hidden:not(.hack-selector) {
+  display: none;
+}
+
+.no-opacity:not(.hack-selector) {
+  opacity: 0;
+}
+
+.mobile-only:not(.hack-selector) {
+  display: none;
+
+  @include viewport--sm {
+    display: block;
+  }
+}
+
+.desctop-only:not(.hack-selector) {
+  display: block;
+
+  @include viewport--md {
+    display: none;
+  }
+}
+
+.teblet-only:not(.hack-selector) {
+  display: none;
+
+  @include viewport--md {
+    display: block;
+  }
+
+  @include viewport--sm {
+    display: none;
+  }
+}
+
+.vertical-reveal-inner.visible {
+  animation-name: verticalReveal;
+  animation-duration: 1.5s;
+  animation-timing-function: $transition-animation;
+  animation-fill-mode: both;
+}
+
+.vertical-reveal-line-inner.visible {
+  animation-name: verticalRevealLine;
+  animation-duration: 1.5s;
+  animation-timing-function: $transition-animation;
+  animation-fill-mode: both;
+}
+
+.horizontal-reveal-left-inner.visible {
+  animation-name: horizontalRevealLeft;
+  animation-duration: 1.5s;
+  animation-timing-function: $transition-animation;
+  animation-fill-mode: both;
+}
+
+.horizontal-reveal-right-inner.visible {
+  animation-name: horizontalRevealRight;
+  animation-duration: 1.5s;
+  animation-timing-function: $transition-animation;
+  animation-fill-mode: both;
+}
+
+.reveal-smoke-inner.visible {
+  animation-name: smokeReveal;
+  animation-duration: 1.5s;
+  animation-timing-function: $transition-animation;
+  animation-fill-mode: both;
+}
+
+.reveal-circle-inner.visible {
+  img {
+    animation-name: circleReveal;
+    animation-duration: 3s;
+    animation-timing-function: $transition-animation;
+    animation-fill-mode: both;
+  }
+}
+
+.reveal-inset-inner.visible {
+  img {
+    animation-name: insetReveal;
+    animation-duration: 1.5s;
+    animation-timing-function: $transition-animation;
+    animation-fill-mode: both;
+  }
+}
+
+.vertical-reveal-outer {
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.vertical-reveal-inner {
+  display: inline-flex;
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.vertical-reveal-line-inner {
+  opacity: 0;
+  background-size: 0% 100%;
+}
+
+.horizontal-reveal-left-inner {
+  display: inline-flex;
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+.horizontal-reveal-right-inner {
+  display: inline-flex;
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+.reveal-smoke-inner {
+  display: inline-flex;
+  transform: translateY(100px);
+  filter: blur(20px);
+  opacity: 0;
+}
+
+.reveal-circle-inner {
+  img {
+    clip-path: circle(0.1%);
+  }
+}
+
+.reveal-inset-inner {
+  img {
+    clip-path: inset(100%);
+  }
+}
+
+.no-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

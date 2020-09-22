@@ -1,0 +1,68 @@
+// Colors
+//---------------------------------
+// Для нейминга цветов используйте https://www.htmlcsscolor.com/
+
+// Base
+
+$color-black-russian:             #0e0e11;
+$color-black-pearl:               #0b0d0f;
+$color-bastille:                  #333337;
+$color-white:                     #ffffff;
+$color-radical-red:               #fc4445;
+$color-turbo:                     #fbc823;
+$color-neon-blue:                 #2c39f2;
+$color-torch-red:                 #ff1553;
+$color-transparent:               rgba(0, 0, 0, 0);
+
+
+// Background
+
+$bg-black-russian:                 $color-black-russian;
+$bg-black-pearl:                   $color-black-pearl;
+$bg-bastille:                      $color-bastille;
+$bg-radical-red:                   $color-radical-red;
+$bg-turbo:                         $color-turbo;
+$bg-white:                         $color-white;
+$bg-neon-blue:                     $color-neon-blue;
+$bg-torch-red:                     $color-torch-red;
+$bg-transparent:                   $color-transparent;
+
+
+// Font
+
+$font-color-default:               $color-black-russian;
+$font-color-black-pearl:           $color-black-pearl;
+$font-color-bastille:              $color-bastille;
+$font-color-white:                 $color-white;
+$font-color-radical-red:           $color-radical-red;
+$font-color-turbo:                 $color-turbo;
+$font-color-neon-blue:             $color-neon-blue;
+$font-color-torch-red:             $color-torch-red;
+
+
+// Font Family
+//---------------------------------
+
+$font-family--main:                "Roboto", "Arial", sans-serif;
+
+// Viewports
+//---------------------------------
+
+$viewport--sm:                     375px;
+$viewport--md:                     768px;
+$viewport--lg:                     1024px;
+$viewport--xl:                     1200px;
+$viewport--xxl:                    1440px;
+
+// Animation
+//---------------------------------
+
+$transition-base:                  0.3s ease;
+$transition-animation:             cubic-bezier(0.19, 1, 0.22, 1);
+$transition-menu:                  cubic-bezier(0.77, 0, 0.175, 1);
+
+// Retina
+//---------------------------------
+
+$retina-dpi:                       144dpi;
+$retina-dppx:                      1.5dppx;

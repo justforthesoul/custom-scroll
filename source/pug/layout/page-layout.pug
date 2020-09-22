@@ -1,0 +1,48 @@
+include ../global/mixins
+include ../global/header
+include ../global/footer
+
+block data
+block variables
+
+doctype html
+html(lang='ru')
+  head
+    title= title
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='description', content='Кастомный скролл')
+    link(rel='preload', href='fonts/Roboto-Light.woff2', as='font', crossorigin='anonymous')
+    link(rel='preload', href='fonts/Roboto-Regular.woff2', as='font', crossorigin='anonymous')
+    link(rel='preload', href='fonts/Roboto-Medium.woff2', as='font', crossorigin='anonymous')
+    link(rel='preload', href='fonts/Roboto-Bold.woff2', as='font', crossorigin='anonymous')
+    link(rel='stylesheet', href='css/style.min.css')
+
+  body
+    +sprite()
+    if (customScroll)
+      div(class= (wrapperMod) ? 'scroll-container wrapper wrapper--' + wrapperMod : 'scroll-container wrapper')
+        .scroll-translator
+          if (header)
+            +header(headerMod, currentPage)
+
+          block main
+
+          if (footer)
+            +footer(footerMod)
+      .scroller
+    else
+      div(class= (wrapperMod) ? 'wrapper wrapper--' + wrapperMod : 'wrapper')
+        if (header)
+          +header(headerMod, currentPage)
+
+        block main
+
+        if (footer)
+          +footer(footerMod)
+
+    block modals
+
+    script(src='js/vendor.min.js')
+    script(src='js/main.min.js')

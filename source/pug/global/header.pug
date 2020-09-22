@@ -1,0 +1,32 @@
+mixin header(headerMod, currentPage)
+  -
+    var headerLinks = [
+      {
+        href: 'main.html',
+        text: 'main'
+      },
+      {
+        href: 'page2.html',
+        text: 'page2'
+      },
+      {
+        href: 'page3.html',
+        text: 'page3'
+      },
+      {
+        href: 'page4.html',
+        text: 'page4'
+      },
+    ]
+
+  header(class= (headerMod) ? "header header--" + headerMod : "header")
+    .header__wrapper.container
+      nav.header__nav
+        ul.header__nav-list
+          each link, index in headerLinks
+            if(index === currentPage)
+              li
+                a.header__nav-link.header__nav-link--active= link.text
+            else
+              li
+                a.header__nav-link(href= link.href)= link.text

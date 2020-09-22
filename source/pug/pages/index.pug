@@ -1,0 +1,167 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = 'Index'
+  - var customScroll = true
+
+block main
+  main
+    section.tab-area.intro.container(data-animate-block='vertical')
+      .intro__content(data-animate-group, data-animate-group-delay='1000')
+        h1.intro__title
+          span
+            span.vertical-reveal-outer
+              span.vertical-reveal-inner(data-animate-child) This
+          =' '
+          span
+            span.vertical-reveal-outer
+              span.vertical-reveal-inner(data-animate-child) is
+          =' '
+          span
+            span.vertical-reveal-outer
+              span.vertical-reveal-inner(data-animate-child) a
+          =' '
+          span
+            span.vertical-reveal-outer
+              span.vertical-reveal-inner(data-animate-child) Custom
+          =' '
+          span
+            span.vertical-reveal-outer
+              span.vertical-reveal-inner(data-animate-child) Scroll
+        .intro__info
+          span.vertical-reveal-outer
+            span.vertical-reveal-inner(data-animate-child) and not only
+    section.tab-area.horizontal-scroll
+      h2.horizontal-scroll__title Horizontal scroll
+      .horizontal-scroll__link-wrapper(data-animate-block='vertical')
+        a.horizontal-scroll__fixed-link(href='#', data-animate-group)
+          span.vertical-reveal-outer
+            span.vertical-reveal-inner(data-animate-child) Fixed link
+      .horizontal-scroll__content(data-animate-block='horizontal')
+        .horizontal-scroll__item
+          .horizontal-scroll__item-content(data-animate-group)
+            h3.horizontal-scroll__item-title
+              span.vertical-reveal-outer
+                span.vertical-reveal-inner(data-animate-child) Some title
+            p.horizontal-scroll__item-desc
+              span.vertical-reveal-outer
+                span.vertical-reveal-inner(data-animate-child) Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, porro eum aut consectetur sint error maiores debitis pariatur
+            a.horizontal-scroll__item-link(href='#')
+              span.vertical-reveal-outer
+                span.vertical-reveal-inner(data-animate-child) Some link
+          .horizontal-scroll__item-img
+            +img('content', 'slide-1', 'jpg', 550, 550, 'Фото')
+        .horizontal-scroll__item
+          .horizontal-scroll__item-content(data-animate-group)
+            h3.horizontal-scroll__item-title
+              span.vertical-reveal-outer
+                span.vertical-reveal-inner(data-animate-child) Some title
+            p.horizontal-scroll__item-desc
+              span.vertical-reveal-outer
+                span.vertical-reveal-inner(data-animate-child) Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, porro eum aut consectetur sint error maiores debitis pariatur
+            a.horizontal-scroll__item-link(href='#')
+              span.vertical-reveal-outer
+                span.vertical-reveal-inner(data-animate-child) Some link
+          .horizontal-scroll__item-img
+            +img('content', 'slide-2', 'jpg', 550, 550, 'Фото')
+        .horizontal-scroll__item
+          .horizontal-scroll__item-content(data-animate-group)
+            h3.horizontal-scroll__item-title
+              span.vertical-reveal-outer
+                span.vertical-reveal-inner(data-animate-child) Some title
+            p.horizontal-scroll__item-desc
+              span.vertical-reveal-outer
+                span.vertical-reveal-inner(data-animate-child) Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, porro eum aut consectetur sint error maiores debitis pariatur
+            a.horizontal-scroll__item-link(href='#')
+              span.vertical-reveal-outer
+                span.vertical-reveal-inner(data-animate-child) Some link
+          .horizontal-scroll__item-img
+            +img('content', 'slide-3', 'jpg', 550, 550, 'Фото')
+        .horizontal-scroll__item
+          .horizontal-scroll__item-content(data-animate-group)
+            h3.horizontal-scroll__item-title
+              span.vertical-reveal-outer
+                span.vertical-reveal-inner(data-animate-child) Some title
+            p.horizontal-scroll__item-desc
+              span.vertical-reveal-outer
+                span.vertical-reveal-inner(data-animate-child) Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, porro eum aut consectetur sint error maiores debitis pariatur
+            a.horizontal-scroll__item-link(href='#')
+              span.vertical-reveal-outer
+                span.vertical-reveal-inner(data-animate-child) Some link
+          .horizontal-scroll__item-img
+            +img('content', 'slide-4', 'jpg', 550, 550, 'Фото')
+    section.tab-area.text-block(data-animate-block='vertical')
+      h2.text-block__title(data-animate-group)
+        span.vertical-reveal-outer
+          span.vertical-reveal-line-inner(data-animate-child) Let’s Make Something Interesting
+      .text-block__text-content
+        .text-block__item(data-animate-group)
+          h3.text-block__item-title
+            span.vertical-reveal-outer
+              span.vertical-reveal-inner(data-animate-child) Vertical reveal
+          p.text-block__item-text
+            span.vertical-reveal-outer
+              span.vertical-reveal-inner(data-animate-child) Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, porro eum aut consectetur sint error maiores debitis pariatur doloribus lectus quam deserunt explicabo, non magnam, nostrum vitae quod! Corporis, cupiditate.
+        .text-block__item(data-animate-group)
+          h3.text-block__item-title
+            span.vertical-reveal-outer
+              span.vertical-reveal-inner(data-animate-child) Vertical reveal
+          p.text-block__item-text
+            span.vertical-reveal-outer
+              span.vertical-reveal-inner(data-animate-child) Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, porro eum aut consectetur sint error maiores debitis pariatur doloribus lectus quam deserunt explicabo, non magnam, nostrum vitae quod! Corporis, cupiditate.
+        .text-block__item(data-animate-group)
+          h3.text-block__item-title
+            span.vertical-reveal-outer
+              span.horizontal-reveal-left-inner(data-animate-child) Horizontal reveal left
+          p.text-block__item-text
+            span.vertical-reveal-outer
+              span.horizontal-reveal-left-inner(data-animate-child) Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, porro eum aut consectetur sint error maiores debitis pariatur doloribus lectus quam deserunt explicabo, non magnam, nostrum vitae quod! Corporis, cupiditate.
+        .text-block__item(data-animate-group)
+          h3.text-block__item-title
+            span.vertical-reveal-outer
+              span.horizontal-reveal-right-inner(data-animate-child) Horizontal reveal right
+          p.text-block__item-text
+            span.vertical-reveal-outer
+              span.horizontal-reveal-right-inner(data-animate-child) Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, porro eum aut consectetur sint error maiores debitis pariatur doloribus lectus quam deserunt explicabo, non magnam, nostrum vitae quod! Corporis, cupiditate.
+        .text-block__item(data-animate-group)
+          h3.text-block__item-title
+            span.vertical-reveal-outer
+              span.reveal-smoke-inner(data-animate-child) Smoke reveal
+          p.text-block__item-text
+            span.vertical-reveal-outer
+              span.reveal-smoke-inner(data-animate-child) Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, porro eum aut consectetur sint error maiores debitis pariatur doloribus lectus quam deserunt explicabo, non magnam, nostrum vitae quod! Corporis, cupiditate.
+        .text-block__item(data-animate-group)
+          h3.text-block__item-title
+            span.vertical-reveal-outer
+              span.reveal-smoke-inner(data-animate-child) Smoke reveal
+          p.text-block__item-text
+            span.vertical-reveal-outer
+              span.reveal-smoke-inner(data-animate-child) Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, porro eum aut consectetur sint error maiores debitis pariatur doloribus lectus quam deserunt explicabo, non magnam, nostrum vitae quod! Corporis, cupiditate.
+        .text-block__item(data-animate-group)
+          h3.text-block__item-title
+            span.vertical-reveal-outer
+              span.vertical-reveal-inner(data-animate-child) Img animate circle
+          .text-block__item-img.vertical-reveal-outer
+            span.reveal-circle-inner(data-animate-child)
+              +img('content', 'img-1', 'jpg', 460, 270, 'Фото')
+        .text-block__item(data-animate-group)
+          h3.text-block__item-title
+            span.vertical-reveal-outer
+              span.vertical-reveal-inner(data-animate-child) Img animate circle
+          .text-block__item-img.vertical-reveal-outer
+            span.reveal-circle-inner(data-animate-child)
+              +img('content', 'img-2', 'jpg', 460, 270, 'Фото')
+        .text-block__item(data-animate-group)
+          h3.text-block__item-title
+            span.vertical-reveal-outer
+              span.vertical-reveal-inner(data-animate-child) Img animate inset
+          .text-block__item-img.vertical-reveal-outer
+            span.reveal-inset-inner(data-animate-child)
+              +img('content', 'img-1', 'jpg', 460, 270, 'Фото')
+        .text-block__item(data-animate-group)
+          h3.text-block__item-title
+            span.vertical-reveal-outer
+              span.vertical-reveal-inner(data-animate-child) Img animate inset
+          .text-block__item-img.vertical-reveal-outer
+            span.reveal-inset-inner(data-animate-child)
+              +img('content', 'img-2', 'jpg', 460, 270, 'Фото')

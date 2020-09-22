@@ -1,0 +1,105 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+
+  background-color: rgba($bg-black-russian, 0.6);
+  transform: scale(1.2);
+  visibility: hidden;
+  opacity: 0;
+
+  transition: opacity $transition-animation,
+  transform $transition-animation,
+  visibility $transition-animation;
+
+  pointer-events: none;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 60px 40px;
+
+    @include viewport--sm {
+      padding: 60px 16px;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+  }
+
+  &__content {
+    position: relative;
+
+    width: 600px;
+    padding: 40px;
+
+    background-color: $bg-white;
+
+    @include viewport--sm {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  &--responsive {
+    .modal__content {
+      width: 100%;
+    }
+  }
+
+  &--content-width {
+    .modal__content {
+      width: auto;
+    }
+  }
+
+  &--no-scale {
+    transform: none;
+  }
+
+  &--preload {
+    display: none;
+  }
+
+  &--active {
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+
+    pointer-events: auto;
+  }
+}
